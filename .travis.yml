@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t fudai09/docker-react -f Dockerfile.dev .
 script:
-  - docker run fudai09/docker-react npm test -- --coverage
+  - docker run -e CI=true fudai09/docker-react npm test -- --coverage
